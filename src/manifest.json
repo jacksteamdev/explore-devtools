@@ -1,0 +1,5 @@
+{
+  "manifest_version": 3,
+  "name": "Explore DevTools",
+  "devtools_page": "devtools.html"
+}

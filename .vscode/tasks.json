@@ -1,0 +1,58 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev:build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: dev:build",
+      "detail": "rollup -c -w",
+      "presentation": {
+        "group": "build"
+      }
+    },
+    {
+      "type": "npm",
+      "script": "dev:vite-serve",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: dev:vite-serve",
+      "detail": "rollup -c -w",
+      "presentation": {
+        "group": "build"
+      }
+    },
+    {
+      "type": "npm",
+      "script": "dev:serve",
+      "problemMatcher": [],
+      "label": "npm: dev:serve",
+      "detail": "sirv-cli ./playground",
+      "presentation": {
+        "reveal": "never"
+      }
+    },
+    {
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["lint", "--", "--watch"],
+      "problemMatcher": ["$tsc-watch"],
+      "label": "npm: lint",
+      "detail": "tsc --noEmit",
+      "presentation": {
+        "reveal": "never"
+      }
+    },
+    {
+      "label": "dev build tasks",
+      "dependsOn": ["npm: lint", "npm: dev:vite-serve"],
+      "dependsOrder": "parallel",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
