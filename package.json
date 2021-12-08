@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
-    "@types/chrome": "^0.0.127",
     "svelte": "^3.44.2"
   },
   "devDependencies": {
@@ -24,6 +23,7 @@
     "@rollup/plugin-typescript": "^8.2.1",
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "@tsconfig/svelte": "^2.0.1",
+    "@types/chrome": "^0.0.168",
     "@types/ws": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",

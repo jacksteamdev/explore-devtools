@@ -9,8 +9,12 @@ import * as WebSocket from 'ws'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import preprocess from 'svelte-preprocess'
 
-// @ts-expect-error linked lib w/ different rollup version
-export default defineConfig(({ command }) => {
+const delay = (ms: number) =>
+  new Promise<void>((resolve) => {
+    setTimeout(() => resolve(), ms)
+  })
+
+export default defineConfig(async ({ command }) => {
   if (command === 'serve') {
     const port = 5050
     const server = new WebSocket.Server({ port })
@@ -20,6 +24,8 @@ export default defineConfig(({ command }) => {
     )
   }
 
+  command === 'serve' && (await delay(5000))
+
   return {
     root: 'src',
     clearScreen: false,
@@ -28,12 +34,15 @@ export default defineConfig(({ command }) => {
       minify: false,
       sourcemap: 'inline',
       outDir: '../dist-vite',
+      rollupOptions: {
+        input: ['test1.html', 'test2.html'],
+      },
     },
     plugins: [
       viteInspect(),
       chromeExtension({
         extendManifest: {
-          version_name: `Vite ${command}`
+          version_name: `Vite ${command}`,
         },
       }),
       simpleReloader(),

@@ -7,11 +7,11 @@ specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.0.0-next.30
   '@tailwindcss/forms': ^0.3.3
   '@tsconfig/svelte': ^2.0.1
-  '@types/chrome': ^0.0.127
+  '@types/chrome': ^0.0.168
   '@types/ws': ^8.2.0
   '@typescript-eslint/eslint-plugin': ^4.28.1
   '@typescript-eslint/parser': ^4.28.1
-  '@xstate/inspect': ^0.5.2
+  '@xstate/inspect': 0.5.2
   autoprefixer: ^10.2.6
   cross-env: ^7.0.3
   eslint: ^8.3.0
@@ -39,7 +39,6 @@ specifiers:
 
 dependencies:
   '@tailwindcss/forms': 0.3.3_tailwindcss@2.2.4
-  '@types/chrome': 0.0.127
   svelte: 3.44.2
 
 devDependencies:
@@ -48,6 +47,7 @@ devDependencies:
   '@rollup/plugin-typescript': 8.2.1_f98a8762ffe7e6cea3574877623d19a6
   '@sveltejs/vite-plugin-svelte': 1.0.0-next.30_svelte@3.44.2+vite@2.7.0-beta.8
   '@tsconfig/svelte': 2.0.1
+  '@types/chrome': 0.0.168
   '@types/ws': 8.2.0
   '@typescript-eslint/eslint-plugin': 4.28.1_269330750789016660a6826a952bb365
   '@typescript-eslint/parser': 4.28.1_eslint@8.3.0+typescript@4.3.4
@@ -333,12 +333,12 @@ packages:
     resolution: {integrity: sha512-aqkICXbM1oX5FfgZd2qSSAGdyo/NRxjWCamxoyi3T8iVQnzGge19HhDYzZ6NrVOW7bhcWNSq9XexWFtMzbB24A==}
     dev: true
 
-  /@types/chrome/0.0.127:
-    resolution: {integrity: sha512-hBB9EApLYKKn2GvklVkTxVP6vZvxsH9okyIRUinNtMzZHIgIKWQk/ESbX+O5g4Bihfy38+aFGn7Kl7Cxou5JUg==}
+  /@types/chrome/0.0.168:
+    resolution: {integrity: sha512-kMA+5H9PSO7kEixgFgehp8xxzBV5qR9hyLCCt8j4/BIf5SJXXtVB6ik2uycU8PHgfFtMDgIC5/qQZplifYon2g==}
     dependencies:
       '@types/filesystem': 0.0.31
       '@types/har-format': 1.2.6
-    dev: false
+    dev: true
 
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
@@ -352,15 +352,15 @@ packages:
     resolution: {integrity: sha512-9Dj1Gb7ZhknhJ8J1H/lTQrEorwIHWZlO9Tfi0WMrvyO1+2GUIUF8Sg4zrID77hj0ywArzQRJ1MwlT9H7c9QmEQ==}
     dependencies:
       '@types/filewriter': 0.0.29
-    dev: false
+    dev: true
 
   /@types/filewriter/0.0.29:
     resolution: {integrity: sha512-BsPXH/irW0ht0Ji6iw/jJaK8Lj3FJemon2gvEqHKpCdDCeemHa+rI3WBGq5z7cDMZgoLjY40oninGxqk+8NzNQ==}
-    dev: false
+    dev: true
 
   /@types/har-format/1.2.6:
     resolution: {integrity: sha512-TeZjp4COiAWPOeGx1tuFJETr/SBMx80lxqeqnCC36ZVn463f7ElCdA3X9RzDuo3BHjhN4apw41A5uoIw5FzgWA==}
-    dev: false
+    dev: true
 
   /@types/json-schema/7.0.7:
     resolution: {integrity: sha512-cxWFQVseBm6O9Gbw1IWb8r6OS4OhSt3hPZLkFApLjM8TEXROBuQGLAH2i2gZpcXdLBIrpXuTDhH7Vbm1iXmNGA==}
